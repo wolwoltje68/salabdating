@@ -10,8 +10,10 @@ Alles is statisch (HTML, CSS, JavaScript) — geen build, geen dependencies.
 
 https://wolwoltje68.github.io/salabdating/
 
-> Eenmalig instellen: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-> Daarna publiceert de workflow `.github/workflows/pages.yml` de site bij elke push.
+De workflow `.github/workflows/pages.yml` zet GitHub Pages zo nodig zelf aan
+(`enablement: true`) en publiceert de site bij elke push. Lukt dat niet, zet het
+dan eenmalig handmatig aan via **Settings → Pages → Build and deployment →
+Source: GitHub Actions**.
 
 ## Bediening
 

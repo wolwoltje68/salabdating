@@ -30,6 +30,9 @@ jobs:
 
       - name: Pages configureren
         uses: actions/configure-pages@v5
+        with:
+          # Zet GitHub Pages zo nodig zelf aan, zodat er niets handmatig hoeft.
+          enablement: true
 
       - name: Site inpakken
         uses: actions/upload-pages-artifact@v3
