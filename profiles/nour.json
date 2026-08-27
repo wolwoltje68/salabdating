@@ -1,0 +1,18 @@
+{
+  "id": "nour",
+  "naam": "Nour",
+  "leeftijd": 30,
+  "woonplaats": "Leiden",
+  "afstand": 8,
+  "werk": "Docent scheikunde",
+  "bio": "Ik leg dingen graag uit, ook als niemand het vraagt. Onverslaanbaar bij de pubquiz, hopeloos bij het onthouden van namen. Zwem elke dinsdag baantjes.",
+  "interesses": [
+    "Pubquiz",
+    "Zwemmen",
+    "Musea",
+    "Bordspellen"
+  ],
+  "afbeelding": "images/nour.svg",
+  "matchKans": 0.55,
+  "matchTekst": "We hebben een match! Ik zoek nog een teamgenoot voor de pubquiz op woensdag. Voorwaarde: jij doet muziek en sport, ik doe de rest."
+}

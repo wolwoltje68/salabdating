@@ -1,0 +1,18 @@
+{
+  "id": "sem",
+  "naam": "Sem",
+  "leeftijd": 29,
+  "woonplaats": "Rotterdam",
+  "afstand": 12,
+  "werk": "Backend developer",
+  "bio": "Ik kook beter dan ik code, en ik code voor mijn brood. Vaste orde: markt op zaterdag, pasta van scratch op zondag, klagen over de trein op maandag.",
+  "interesses": [
+    "Koken",
+    "Vinyl",
+    "Hardlopen",
+    "Slechte woordgrappen"
+  ],
+  "afbeelding": "images/sem.svg",
+  "matchKans": 0.45,
+  "matchTekst": "Match! Waarschuwing vooraf: ik stuur foto's van alles wat ik kook. Zin om zondag de test te doen — jij kiest de pasta, ik maak de saus?"
+}

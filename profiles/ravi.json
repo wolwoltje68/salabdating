@@ -1,0 +1,18 @@
+{
+  "id": "ravi",
+  "naam": "Ravi",
+  "leeftijd": 32,
+  "woonplaats": "Almere",
+  "afstand": 22,
+  "werk": "Data-analist",
+  "bio": "Ik heb een spreadsheet voor mijn boodschappen en een schaakbord op de vensterbank. Kook curry's waar mensen voor terugkomen, ook als ze zeggen van niet.",
+  "interesses": [
+    "Schaken",
+    "Curry koken",
+    "Wandelen",
+    "Sci-fi"
+  ],
+  "afbeelding": "images/ravi.svg",
+  "matchKans": 0.4,
+  "matchTekst": "Match — de statistieken zaten mee. Ik kook donderdag curry en zoek nog iemand die durft te zeggen dat het te pittig is. Kom je?"
+}

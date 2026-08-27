@@ -1,0 +1,18 @@
+{
+  "id": "lotte",
+  "naam": "Lotte",
+  "leeftijd": 27,
+  "woonplaats": "Utrecht",
+  "afstand": 4,
+  "werk": "Projectmanager bij een duurzaam energiebedrijf",
+  "bio": "Doordeweeks strak in de planning, in het weekend hangend aan een overhang. Zoek iemand die met me mee wil naar de klimhal én daarna naar de markt.",
+  "interesses": [
+    "Bouldering",
+    "Specialty koffie",
+    "Podcasts",
+    "Weekendmarkt"
+  ],
+  "afbeelding": "images/lotte.svg",
+  "matchKans": 0.55,
+  "matchTekst": "Yes, een match! Eerlijk: ik heb je geliket om je profielfoto, maar ik blijf voor de koffie. Zaterdag klimhal, ik trakteer op de eerste flat white?"
+}

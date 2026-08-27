@@ -1,0 +1,18 @@
+{
+  "id": "amira",
+  "naam": "Amira",
+  "leeftijd": 24,
+  "woonplaats": "Amsterdam",
+  "afstand": 31,
+  "werk": "Grafisch ontwerper",
+  "bio": "Ik fotografeer letters op gevels en heb daar veel te veel meningen over. Filmhuis boven bioscoop, thee boven koffie, altijd te laat maar met snacks.",
+  "interesses": [
+    "Typografie",
+    "Filmhuis",
+    "Analoge fotografie",
+    "Thee"
+  ],
+  "afbeelding": "images/amira.svg",
+  "matchKans": 0.5,
+  "matchTekst": "Een match, wat leuk! Vraag één: welke film heb jij het vaakst gezien? Fout antwoord bestaat niet, maar ik ga er wel iets van vinden ☕️"
+}

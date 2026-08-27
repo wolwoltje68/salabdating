@@ -1,0 +1,18 @@
+{
+  "id": "bram",
+  "naam": "Bram",
+  "leeftijd": 34,
+  "woonplaats": "Groningen",
+  "afstand": 64,
+  "werk": "Meubelmaker met eigen werkplaats",
+  "bio": "Ik maak tafels waar mensen te lang aan blijven zitten. Met hond Pip erbij, die het gesprek meestal overneemt. Rust boven drukte, vuur boven verwarming.",
+  "interesses": [
+    "Houtbewerking",
+    "Wadlopen",
+    "Hond Pip",
+    "Kampvuur"
+  ],
+  "afbeelding": "images/bram.svg",
+  "matchKans": 0.35,
+  "matchTekst": "Een match — mooi. Ik ben slecht in appen en beter in koffie op zaterdagochtend. Pip komt mee, die beslist eigenlijk alles."
+}

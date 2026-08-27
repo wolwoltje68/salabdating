@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520" role="img" aria-label="Illustratie van Bram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#9fd9a3"/><stop offset="100%" stop-color="#4fa86a"/>
+    </linearGradient>
+    <linearGradient id="kleding" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b3a45"/><stop offset="100%" stop-color="#1a262e"/>
+    </linearGradient>
+    <clipPath id="kader"><rect width="400" height="520"/></clipPath>
+  </defs>
+  <g clip-path="url(#kader)">
+    <rect width="400" height="520" fill="url(#bg)"/>
+    <circle cx="330" cy="86" r="120" fill="#ffffff" opacity=".10"/>
+    <circle cx="58" cy="150" r="72" fill="#ffffff" opacity=".08"/>
+    <circle cx="96" cy="452" r="150" fill="#000000" opacity=".06"/>
+    
+    <!-- schouders -->
+    <path d="M40 550 C40 400 120 352 200 352 C280 352 360 400 360 550 Z" fill="url(#kleding)"/>
+    <path d="M200 352 C176 372 168 404 172 520 L228 520 C232 404 224 372 200 352 Z" fill="#ffffff" opacity=".14"/>
+    <!-- hals -->
+    <path d="M170 284 h60 v58 c0 20 -60 20 -60 0 Z" fill="#d09a74"/>
+    <!-- hoofd -->
+    <ellipse cx="200" cy="232" rx="76" ry="90" fill="#eab894"/>
+    <ellipse cx="134" cy="250" rx="10" ry="16" fill="#d09a74" opacity=".55"/>
+    <ellipse cx="266" cy="250" rx="10" ry="16" fill="#d09a74" opacity=".55"/>
+    <path d="M130 238 C126 302 160 320.0 200 320.0
+      C240 320.0 274 302 270 238
+      C252 290 230 284 200 284 C170 284 148 290 130 238 Z"
+      fill="#4a3a30" opacity=".9"/>
+    <path d="M126 202 C120 148 280 148 274 202
+      C266 170 134 170 126 202 Z" fill="#4a3a30" opacity=".65"/>
+    <!-- gezicht -->
+    <g fill="#3b2f4a">
+      <ellipse cx="172" cy="234" rx="6" ry="8"/>
+      <ellipse cx="228" cy="234" rx="6" ry="8"/>
+    </g>
+    <g fill="none" stroke="#4a3a30" stroke-width="5" stroke-linecap="round" opacity=".8">
+      <path d="M158 212 q14 -10 28 -2"/>
+      <path d="M242 212 q-14 -10 -28 -2"/>
+    </g>
+    <ellipse cx="154" cy="258" rx="12" ry="7" fill="#e8907f" opacity=".35"/>
+    <ellipse cx="246" cy="258" rx="12" ry="7" fill="#e8907f" opacity=".35"/>
+    <path d="M198 240 q-6 14 4 16" fill="none" stroke="#d09a74" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+    <path d="M174 270 q26 18 52 0" fill="none" stroke="#7d4a49" stroke-width="5" stroke-linecap="round"/>
+    <g><path d="M118 188 C118 108 282 108 282 188 Z" fill="#e2603f"/>
+      <rect x="112" y="180" width="176" height="22" rx="11" fill="#e2603f" opacity=".8"/></g>
+  </g>
+</svg>

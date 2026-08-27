@@ -1,0 +1,18 @@
+{
+  "id": "fenna",
+  "naam": "Fenna",
+  "leeftijd": 23,
+  "woonplaats": "Nijmegen",
+  "afstand": 27,
+  "werk": "Student biologie",
+  "bio": "Mijn kamer is 60% plant, 30% boeken, 10% ik. Ik teken vogels die ik niet goed genoeg zie en ken elk terras met zon tot 21:00.",
+  "interesses": [
+    "Planten",
+    "Vogels spotten",
+    "Tekenen",
+    "Tweedehands"
+  ],
+  "afbeelding": "images/fenna.svg",
+  "matchKans": 0.5,
+  "matchTekst": "Match! Snelle vraag: wil je met me mee naar de Ooijpolder om vogels te kijken, of ben je meer van het terras? Beide antwoorden zijn goed."
+}

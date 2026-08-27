@@ -1,0 +1,18 @@
+{
+  "id": "tess",
+  "naam": "Tess",
+  "leeftijd": 25,
+  "woonplaats": "Haarlem",
+  "afstand": 15,
+  "werk": "Barista en surfinstructeur",
+  "bio": "Om 6:00 op het water, om 8:00 achter de machine. Ik praat te veel over golven en te weinig over mezelf. Zoek iemand die vroeg opstaan aankan.",
+  "interesses": [
+    "Surfen",
+    "Latte art",
+    "Zonsopkomst",
+    "Roadtrips"
+  ],
+  "afbeelding": "images/tess.svg",
+  "matchKans": 0.5,
+  "matchTekst": "Match! Eerlijke deal: ik leer jou surfen, jij leert mij uitslapen. Zondag 7:00 bij Bloemendaal — te vroeg bestaat niet, alleen te weinig koffie."
+}

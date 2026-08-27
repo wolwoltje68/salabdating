@@ -1,0 +1,41 @@
+name: Publiceren naar GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - "claude/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Eén publicatie tegelijk; lopende runs niet afbreken.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publiceren:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicatie.outputs.page_url }}
+    steps:
+      - name: Repository uitchecken
+        uses: actions/checkout@v4
+
+      - name: Pages configureren
+        uses: actions/configure-pages@v5
+
+      - name: Site inpakken
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Publiceren
+        id: publicatie
+        uses: actions/deploy-pages@v4
