@@ -10,10 +10,23 @@ Alles is statisch (HTML, CSS, JavaScript) — geen build, geen dependencies.
 
 https://wolwoltje68.github.io/salabdating/
 
-De workflow `.github/workflows/pages.yml` zet GitHub Pages zo nodig zelf aan
-(`enablement: true`) en publiceert de site bij elke push. Lukt dat niet, zet het
-dan eenmalig handmatig aan via **Settings → Pages → Build and deployment →
-Source: GitHub Actions**.
+### Eenmalig aanzetten (1 minuut)
+
+GitHub Pages moet één keer door de eigenaar van de repository worden
+aangezet — dat kan niet vanuit een workflow:
+
+1. Ga naar **Settings → Pages**.
+2. Zet bij **Build and deployment → Source** de optie op **GitHub Actions**.
+3. Ga naar **Actions → Publiceren naar GitHub Pages** en klik bij de laatste
+   run op **Re-run all jobs** (of push een nieuwe commit).
+
+Daarna publiceert `.github/workflows/pages.yml` de site automatisch bij elke
+push naar `main`, `master` of een `claude/*`-branch. Staat Pages nog niet aan,
+dan faalt de stap "Pages configureren" met de melding
+`Get Pages site failed` — dat is precies deze instelling.
+
+> Let op: de site wordt gepubliceerd vanaf de branch waarop je pusht. Zorg dat
+> de branch die je wilt tonen ook de branch is die de workflow draait.
 
 ## Bediening
 
