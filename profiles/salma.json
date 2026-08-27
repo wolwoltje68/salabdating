@@ -1,0 +1,18 @@
+{
+  "id": "salma",
+  "name": "Salma",
+  "age": 31,
+  "city": "Doha",
+  "distance": 8,
+  "work": "Civil engineer",
+  "bio": "I build things that have to stay standing, which explains a lot about me. Weekends are for long walks along the Corniche and arguing about the best hummus in town.",
+  "interests": [
+    "Running",
+    "Corniche walks",
+    "Board games",
+    "Food markets"
+  ],
+  "image": "images/salma.jpg",
+  "matchChance": 0.45,
+  "matchText": "Match! I've been told I'm competitive, which is true. Friday: walk along the Corniche, then you pick the restaurant and I'll tell you why you're wrong."
+}

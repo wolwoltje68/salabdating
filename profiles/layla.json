@@ -1,0 +1,18 @@
+{
+  "id": "layla",
+  "name": "Layla",
+  "age": 27,
+  "city": "Dubai",
+  "distance": 4,
+  "work": "Architect",
+  "bio": "I design buildings all week and get lost in old souks on weekends. Looking for someone who has opinions about coffee and no opinions about my plant collection.",
+  "interests": [
+    "Architecture",
+    "Specialty coffee",
+    "Desert drives",
+    "Photography"
+  ],
+  "image": "images/layla.jpg",
+  "matchChance": 0.55,
+  "matchText": "It's a match! Honest confession: I liked your profile for the smile, but I'm staying for the conversation. Coffee Saturday at Alserkal — first round is on me."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "dalia",
+  "name": "Dalia",
+  "age": 32,
+  "city": "Kuwait City",
+  "distance": 39,
+  "work": "Data analyst",
+  "bio": "I have a spreadsheet for my groceries and a chessboard on the windowsill. I cook the kind of food people come back for, even when they claim they won't.",
+  "interests": [
+    "Chess",
+    "Cooking",
+    "Hiking",
+    "Sci-fi"
+  ],
+  "image": "images/dalia.jpg",
+  "matchChance": 0.4,
+  "matchText": "Match — the numbers were in our favour. I'm cooking on Thursday and I need someone brave enough to say it's too spicy. Are you in?"
+}

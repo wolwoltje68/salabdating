@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Salab Dating — swipe demo</title>
-<meta name="description" content="Demo van een dating-app: swipe door willekeurige profielen en ontdek of het een match is.">
+<meta name="description" content="Dating app demo: swipe through random profiles and find out whether it is a match.">
 <meta name="theme-color" content="#12101a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%92%98%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
@@ -19,51 +19,51 @@
       <svg class="merk__hart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8.5-5.6-8.5-11A5 5 0 0 1 12 6.5 5 5 0 0 1 20.5 10c0 5.4-8.5 11-8.5 11z"/></svg>
       <span>salab<strong>dating</strong></span>
     </div>
-    <div class="matchteller" id="matchteller" title="Aantal matches">
+    <div class="matchteller" id="matchteller" title="Number of matches">
       <span class="matchteller__aantal" id="matchteller-aantal">0</span>
       <span class="matchteller__label">matches</span>
     </div>
   </header>
 
-  <div class="matchstrip" id="matchstrip" aria-label="Jouw matches"></div>
+  <div class="matchstrip" id="matchstrip" aria-label="Your matches"></div>
 
   <main class="stapel" id="stapel">
     <div class="status" id="status">
       <div class="spinner" aria-hidden="true"></div>
-      <p>Profielen laden…</p>
+      <p>Loading profiles…</p>
     </div>
   </main>
 
   <footer class="acties" id="acties">
-    <button class="knop knop--nope" id="knop-nope" type="button" aria-label="Niet interessant (pijltje links)">
+    <button class="knop knop--nope" id="knop-nope" type="button" aria-label="Not interested (left arrow key)">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <button class="knop knop--info" id="knop-shuffle" type="button" aria-label="Stapel opnieuw schudden">
+    <button class="knop knop--info" id="knop-shuffle" type="button" aria-label="Reshuffle the deck">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l10 10h4M17 3l4 4-4 4M3 17h4l3-3M14 10l3-3h4M17 21l4-4"/></svg>
     </button>
-    <button class="knop knop--like" id="knop-like" type="button" aria-label="Leuk! (pijltje rechts)">
+    <button class="knop knop--like" id="knop-like" type="button" aria-label="Like (right arrow key)">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8.5-5.6-8.5-11A5 5 0 0 1 12 6.5 5 5 0 0 1 20.5 10c0 5.4-8.5 11-8.5 11z"/></svg>
     </button>
   </footer>
 
-  <p class="hint">Sleep de kaart of gebruik <kbd>←</kbd> en <kbd>→</kbd></p>
+  <p class="hint">Drag the card or use <kbd>←</kbd> and <kbd>→</kbd></p>
 </div>
 
-<!-- Match-scherm -->
+<!-- Match screen -->
 <div class="matchscherm" id="matchscherm" role="dialog" aria-modal="true" aria-labelledby="matchtitel" hidden>
   <div class="confetti" id="confetti" aria-hidden="true"></div>
   <div class="matchscherm__inhoud">
-    <p class="matchscherm__kop" id="matchtitel">Het is een match!</p>
-    <p class="matchscherm__sub" id="matchsub">Jij en Lotte vinden elkaar leuk</p>
+    <p class="matchscherm__kop" id="matchtitel">It's a match!</p>
+    <p class="matchscherm__sub" id="matchsub">You and Layla liked each other</p>
     <div class="matchscherm__fotos">
-      <img class="matchscherm__foto" id="match-foto-jij" src="images/jij.svg" alt="Jouw profielfoto">
+      <img class="matchscherm__foto" id="match-foto-jij" src="images/you.jpg" alt="Your profile photo">
       <span class="matchscherm__hart">💘</span>
       <img class="matchscherm__foto" id="match-foto" src="" alt="">
     </div>
     <blockquote class="bericht" id="matchbericht"></blockquote>
     <div class="matchscherm__knoppen">
-      <button class="tekstknop tekstknop--primair" id="knop-bericht" type="button">Stuur een bericht</button>
-      <button class="tekstknop" id="knop-verder" type="button">Verder swipen</button>
+      <button class="tekstknop tekstknop--primair" id="knop-bericht" type="button">Send a message</button>
+      <button class="tekstknop" id="knop-verder" type="button">Keep swiping</button>
     </div>
   </div>
 </div>

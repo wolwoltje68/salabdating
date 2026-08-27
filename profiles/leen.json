@@ -1,0 +1,18 @@
+{
+  "id": "leen",
+  "name": "Leen",
+  "age": 22,
+  "city": "Sharjah",
+  "distance": 11,
+  "work": "Medical student",
+  "bio": "Six years of studying and a very serious opinion about which library has the best chairs. I run to clear my head and bake when the exams get too close.",
+  "interests": [
+    "Running",
+    "Reading",
+    "Baking",
+    "Calligraphy"
+  ],
+  "image": "images/leen.jpg",
+  "matchChance": 0.55,
+  "matchText": "It's a match! I have exactly one free evening this week and I'd rather spend it not looking at my notes. Tell me somewhere good to eat and I'm there."
+}

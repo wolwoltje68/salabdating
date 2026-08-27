@@ -1,0 +1,18 @@
+{
+  "id": "yasmin",
+  "name": "Yasmin",
+  "age": 24,
+  "city": "Amman",
+  "distance": 31,
+  "work": "Biology student",
+  "bio": "My room is 60% plants, 30% books, 10% me. I sketch birds I can't quite see well enough and I know every rooftop café that stays sunny until sunset.",
+  "interests": [
+    "Plants",
+    "Birdwatching",
+    "Sketching",
+    "Thrifting"
+  ],
+  "image": "images/yasmin.jpg",
+  "matchChance": 0.5,
+  "matchText": "A match! Quick question: would you come birdwatching in the Dana reserve with me, or are you more of a rooftop café person? Both answers are good."
+}

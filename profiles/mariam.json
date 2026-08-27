@@ -1,0 +1,18 @@
+{
+  "id": "mariam",
+  "name": "Mariam",
+  "age": 23,
+  "city": "Muscat",
+  "distance": 48,
+  "work": "Art student",
+  "bio": "I repaint my room more often than my canvases. I collect vintage jackets and stories from strangers. Terrible planner, very good listener.",
+  "interests": [
+    "Painting",
+    "Vintage",
+    "Night walks",
+    "Poetry"
+  ],
+  "image": "images/mariam.jpg",
+  "matchChance": 0.6,
+  "matchText": "It's a match! I'll be painting near the waterfront tomorrow with far too much coffee. Come by and I'll draw you — you get to choose how flattering it is."
+}

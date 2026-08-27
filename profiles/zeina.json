@@ -1,0 +1,18 @@
+{
+  "id": "zeina",
+  "name": "Zeina",
+  "age": 26,
+  "city": "Manama",
+  "distance": 34,
+  "work": "Music producer",
+  "bio": "I make beats in a room that's too small and drink coffee that's too strong. I'll take you to tiny venues you've never heard of and pretend I discovered them.",
+  "interests": [
+    "Records",
+    "Small venues",
+    "Skating",
+    "Late-night drives"
+  ],
+  "image": "images/zeina.jpg",
+  "matchChance": 0.45,
+  "matchText": "Match! I made a playlist for exactly this moment, which sounds more intense than it is. There's a band playing Friday — come with me?"
+}

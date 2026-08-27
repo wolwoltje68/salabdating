@@ -1,0 +1,18 @@
+{
+  "id": "hana",
+  "name": "Hana",
+  "age": 25,
+  "city": "Jeddah",
+  "distance": 27,
+  "work": "Photographer",
+  "bio": "I chase light for a living, which sounds more romantic than the 4am alarms. Old town streets, the Red Sea, and anyone who lets me take their picture badly first.",
+  "interests": [
+    "Photography",
+    "Diving",
+    "Road trips",
+    "Sunrise"
+  ],
+  "image": "images/hana.jpg",
+  "matchChance": 0.5,
+  "matchText": "Match! Fair warning: I will point a camera at you within the first ten minutes. Sunrise at the corniche this Friday — the light there is unreasonably good."
+}

@@ -1,18 +1,18 @@
 {
   "id": "nour",
-  "naam": "Nour",
-  "leeftijd": 30,
-  "woonplaats": "Leiden",
-  "afstand": 8,
-  "werk": "Docent scheikunde",
-  "bio": "Ik leg dingen graag uit, ook als niemand het vraagt. Onverslaanbaar bij de pubquiz, hopeloos bij het onthouden van namen. Zwem elke dinsdag baantjes.",
-  "interesses": [
-    "Pubquiz",
-    "Zwemmen",
-    "Musea",
-    "Bordspellen"
+  "name": "Nour",
+  "age": 29,
+  "city": "Beirut",
+  "distance": 19,
+  "work": "Emergency room nurse",
+  "bio": "Unpredictable shifts, very predictable dance classes. I'm direct, I laugh loudly, and I always cook more than anyone can eat. The sea in winter beats the sea in summer.",
+  "interests": [
+    "Dabke",
+    "Sea walks",
+    "Podcasts",
+    "Baking"
   ],
-  "afbeelding": "images/nour.svg",
-  "matchKans": 0.55,
-  "matchTekst": "We hebben een match! Ik zoek nog een teamgenoot voor de pubquiz op woensdag. Voorwaarde: jij doet muziek en sport, ik doe de rest."
+  "image": "images/nour.jpg",
+  "matchChance": 0.6,
+  "matchText": "It's a match! I'm on nights this weekend, but Thursday I'm free. Fair warning: I'm going to drag you to a dance class and you're going to enjoy it."
 }

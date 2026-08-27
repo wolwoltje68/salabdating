@@ -1,18 +1,18 @@
 {
   "id": "amira",
-  "naam": "Amira",
-  "leeftijd": 24,
-  "woonplaats": "Amsterdam",
-  "afstand": 31,
-  "werk": "Grafisch ontwerper",
-  "bio": "Ik fotografeer letters op gevels en heb daar veel te veel meningen over. Filmhuis boven bioscoop, thee boven koffie, altijd te laat maar met snacks.",
-  "interesses": [
-    "Typografie",
-    "Filmhuis",
-    "Analoge fotografie",
-    "Thee"
+  "name": "Amira",
+  "age": 26,
+  "city": "Cairo",
+  "distance": 12,
+  "work": "Graphic designer",
+  "bio": "I photograph lettering on old walls and have far too many opinions about it. Film nights over parties, tea over coffee, always five minutes late but I bring snacks.",
+  "interests": [
+    "Typography",
+    "Film nights",
+    "Analogue photography",
+    "Karkadeh"
   ],
-  "afbeelding": "images/amira.svg",
-  "matchKans": 0.5,
-  "matchTekst": "Een match, wat leuk! Vraag één: welke film heb jij het vaakst gezien? Fout antwoord bestaat niet, maar ik ga er wel iets van vinden ☕️"
+  "image": "images/amira.jpg",
+  "matchChance": 0.5,
+  "matchText": "We matched! First question: which film have you rewatched the most? There's no wrong answer, but I will absolutely judge it — kindly."
 }

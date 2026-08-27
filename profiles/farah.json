@@ -1,0 +1,18 @@
+{
+  "id": "farah",
+  "name": "Farah",
+  "age": 28,
+  "city": "Abu Dhabi",
+  "distance": 22,
+  "work": "Pastry chef",
+  "bio": "I get up before sunrise so other people can have something sweet at breakfast. I talk too much about butter and not enough about myself. Looking for a taste tester.",
+  "interests": [
+    "Baking",
+    "Night markets",
+    "Old films",
+    "Cardamom everything"
+  ],
+  "image": "images/farah.jpg",
+  "matchChance": 0.55,
+  "matchText": "It's a match! Deal: I bake, you tell me honestly whether it's too sweet. Nobody ever does. Sunday afternoon, my kitchen, bring an appetite."
+}

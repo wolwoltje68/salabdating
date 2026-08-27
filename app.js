@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
    Salab Dating — swipe demo
-   Leest de profielen uit /profiles (JSON) met de afbeeldingen uit /images.
+   Reads the profiles from /profiles (JSON) with the photos from /images.
    ------------------------------------------------------------------ */
 (function () {
   "use strict";
@@ -72,7 +72,7 @@
   function laadProfielen() {
     return fetch(MANIFEST, { cache: "no-store" })
       .then(function (r) {
-        if (!r.ok) throw new Error(MANIFEST + " gaf status " + r.status);
+        if (!r.ok) throw new Error(MANIFEST + " returned status " + r.status);
         return r.json();
       })
       .then(function (lijst) {
@@ -80,11 +80,11 @@
         return Promise.all(bestanden.map(function (naam) {
           return fetch(PROFIELMAP + naam, { cache: "no-store" })
             .then(function (r) {
-              if (!r.ok) throw new Error(naam + " gaf status " + r.status);
+              if (!r.ok) throw new Error(naam + " returned status " + r.status);
               return r.json();
             })
             .catch(function (fout) {
-              console.warn("Profiel overgeslagen:", naam, fout);
+              console.warn("Skipped profile:", naam, fout);
               return null;
             });
         }));
@@ -101,24 +101,24 @@
     kaart.className = "kaart";
 
     var meta = [];
-    if (profiel.woonplaats) meta.push("<b>" + veilig(profiel.woonplaats) + "</b>");
-    if (profiel.afstand != null) meta.push(profiel.afstand + " km verderop");
-    if (profiel.werk) meta.push(veilig(profiel.werk));
+    if (profiel.city) meta.push("<b>" + veilig(profiel.city) + "</b>");
+    if (profiel.distance != null) meta.push(profiel.distance + " km away");
+    if (profiel.work) meta.push(veilig(profiel.work));
 
-    var tags = (profiel.interesses || []).map(function (i) {
+    var tags = (profiel.interests || []).map(function (i) {
       return "<li>" + veilig(i) + "</li>";
     }).join("");
 
     kaart.innerHTML =
       '<div class="kaart__foto">' +
-        '<img src="' + veilig(profiel.afbeelding) + '" alt="Foto van ' + veilig(profiel.naam) + '" draggable="false">' +
+        '<img src="' + veilig(profiel.image) + '" alt="Photo of ' + veilig(profiel.name) + '" draggable="false">' +
       "</div>" +
       '<div class="kaart__waas"></div>' +
       '<div class="stempel stempel--like">LIKE</div>' +
       '<div class="stempel stempel--nope">NOPE</div>' +
       '<div class="kaart__info">' +
-        '<h2 class="kaart__naam">' + veilig(profiel.naam) +
-          (profiel.leeftijd ? " <span>" + profiel.leeftijd + "</span>" : "") + "</h2>" +
+        '<h2 class="kaart__naam">' + veilig(profiel.name) +
+          (profiel.age ? " <span>" + profiel.age + "</span>" : "") + "</h2>" +
         '<p class="kaart__meta">' + meta.join(" · ") + "</p>" +
         (profiel.bio ? '<p class="kaart__bio">' + veilig(profiel.bio) + "</p>" : "") +
         (tags ? '<ul class="kaart__tags">' + tags + "</ul>" : "") +
@@ -250,9 +250,9 @@
       if (naarRechts && isMatch(profiel)) {
         vierMatch(profiel);
       } else if (naarRechts) {
-        toon("Helaas — " + profiel.naam + " heeft je (nog) niet geliket");
+        toon("No luck — " + profiel.name + " hasn't liked you back (yet)");
       } else {
-        toon(profiel.naam + " overgeslagen");
+        toon(profiel.name + " skipped");
       }
 
       // volgende kaart aanvullen zodat de stapel gevuld blijft
@@ -275,7 +275,7 @@
 
   /* Willekeurig: wordt dit een match of niet? */
   function isMatch(profiel) {
-    var kans = typeof profiel.matchKans === "number" ? profiel.matchKans : STANDAARDKANS;
+    var kans = typeof profiel.matchChance === "number" ? profiel.matchChance : STANDAARDKANS;
     return Math.random() < Math.max(0, Math.min(1, kans));
   }
 
@@ -289,11 +289,11 @@
     el.teller.classList.add("pulse");
     vulStrip();
 
-    el.schermSub.textContent = "Jij en " + profiel.naam + " vinden elkaar leuk";
-    el.schermFoto.src = profiel.afbeelding;
-    el.schermFoto.alt = "Foto van " + profiel.naam;
+    el.schermSub.textContent = "You and " + profiel.name + " liked each other";
+    el.schermFoto.src = profiel.image;
+    el.schermFoto.alt = "Photo of " + profiel.name;
     el.schermTekst.textContent =
-      profiel.matchTekst || (profiel.naam + " heeft nog geen bericht achtergelaten.");
+      profiel.matchText || (profiel.name + " has not left a message yet.");
     el.toast.classList.remove("zichtbaar");   // geen oude melding onder het matchscherm
     el.scherm.hidden = false;
     strooiConfetti();
@@ -302,11 +302,11 @@
 
   function vulStrip() {
     if (!matches.length) {
-      el.strip.innerHTML = '<span class="matchstrip__leeg">Nog geen matches — swipe naar rechts om te liken</span>';
+      el.strip.innerHTML = '<span class="matchstrip__leeg">No matches yet — swipe right to like</span>';
       return;
     }
     el.strip.innerHTML = matches.map(function (p) {
-      return '<img src="' + veilig(p.afbeelding) + '" alt="' + veilig(p.naam) + '" title="' + veilig(p.naam) + '">';
+      return '<img src="' + veilig(p.image) + '" alt="' + veilig(p.name) + '" title="' + veilig(p.name) + '">';
     }).join("");
   }
 
@@ -330,13 +330,13 @@
   /* --- einde van de stapel ------------------------------------------ */
 
   function toonEinde() {
-    var namen = matches.map(function (p) { return p.naam; }).join(", ");
+    var namen = matches.map(function (p) { return p.name; }).join(", ");
     status(
-      "<h2>Dat waren alle profielen</h2>" +
-      "<p>Je hebt <strong>" + matches.length + "</strong> " +
-      (matches.length === 1 ? "match" : "matches") + " van de " + alleProfielen.length + " profielen." +
+      "<h2>That's everyone</h2>" +
+      "<p>You got <strong>" + matches.length + "</strong> " +
+      (matches.length === 1 ? "match" : "matches") + " out of " + alleProfielen.length + " profiles." +
       (namen ? "<br>" + veilig(namen) : "") + "</p>" +
-      '<button class="tekstknop tekstknop--primair" id="knop-opnieuw" type="button">Opnieuw swipen</button>'
+      '<button class="tekstknop tekstknop--primair" id="knop-opnieuw" type="button">Start over</button>'
     );
     var opnieuw = document.getElementById("knop-opnieuw");
     if (opnieuw) opnieuw.addEventListener("click", function () { start(true); });
@@ -362,12 +362,12 @@
   el.shuffle.addEventListener("click", function () {
     if (bezig) return;
     start(false);
-    toon("Stapel opnieuw geschud");
+    toon("Deck reshuffled");
   });
   el.verder.addEventListener("click", sluitMatch);
   el.bericht.addEventListener("click", function () {
     sluitMatch();
-    toon("Bericht verstuurd — dit is een demo 😉");
+    toon("Message sent — this is a demo 😉");
   });
 
   document.addEventListener("keydown", function (e) {
@@ -389,7 +389,7 @@
 
   laadProfielen()
     .then(function (profielen) {
-      if (!profielen.length) throw new Error("Geen profielen gevonden in " + PROFIELMAP);
+      if (!profielen.length) throw new Error("No profiles found in " + PROFIELMAP);
       alleProfielen = profielen;
       start(true);
     })
@@ -397,13 +397,13 @@
       console.error(fout);
       var lokaalBestand = location.protocol === "file:";
       status(
-        "<h2>Profielen laden lukt niet</h2>" +
+        "<h2>Could not load the profiles</h2>" +
         "<p>" + veilig(fout.message) + "</p>" +
         (lokaalBestand
-          ? "<p>De browser blokkeert het inlezen van JSON-bestanden via <code>file://</code>.<br>" +
-            "Start een kleine webserver in de projectmap:<br><code>python3 -m http.server 8000</code><br>" +
-            "en open daarna <code>http://localhost:8000</code>.</p>"
-          : "<p>Controleer of de map <code>profiles/</code> met <code>index.json</code> is meegepubliceerd.</p>"),
+          ? "<p>Browsers block reading JSON files over <code>file://</code>.<br>" +
+            "Start a small web server in the project folder:<br><code>python3 -m http.server 8000</code><br>" +
+            "and open <code>http://localhost:8000</code>.</p>"
+          : "<p>Check that the <code>profiles/</code> folder and its <code>index.json</code> were published.</p>"),
         true
       );
     });

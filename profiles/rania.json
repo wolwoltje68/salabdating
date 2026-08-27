@@ -1,0 +1,18 @@
+{
+  "id": "rania",
+  "name": "Rania",
+  "age": 30,
+  "city": "Riyadh",
+  "distance": 15,
+  "work": "Chemistry teacher",
+  "bio": "I like explaining things, even when nobody asked. Unbeatable at quiz nights, hopeless at remembering names. I swim laps every Tuesday and complain about it every Wednesday.",
+  "interests": [
+    "Quiz nights",
+    "Swimming",
+    "Museums",
+    "Chess"
+  ],
+  "image": "images/rania.jpg",
+  "matchChance": 0.5,
+  "matchText": "We have a match! I still need a teammate for quiz night on Wednesday. Conditions: you take music and sport, I'll handle everything else. Interested?"
+}

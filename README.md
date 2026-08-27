@@ -1,112 +1,108 @@
-# salabdating — swipe-demo
+# salabdating — swipe demo
 
-Een presentatiedemo van een dating-app: je swipet door willekeurige profielen en
-krijgt op willekeurige momenten wel of geen match. Bij een match verschijnt het
-bericht dat het profiel zelf heeft opgegeven.
+A presentation demo of a dating app. You swipe through random profiles and get a
+match at random moments. When it is a match, the message written by that profile
+appears on screen.
 
-Alles is statisch (HTML, CSS, JavaScript) — geen build, geen dependencies.
+Everything is static (HTML, CSS, JavaScript) — no build step, no dependencies.
+
+## Demo account
+
+The demo is presented from a **male account looking for women**, so every profile
+in the deck is a woman. The account's own photo (shown on the match screen) is
+`images/you.jpg`.
+
+The profiles are written in English for an Arabic audience: Arabic names, cities
+across the Gulf and the Levant, and illustrated portraits in `images/`.
 
 ## Live demo
 
 https://wolwoltje68.github.io/salabdating/
 
-### Eenmalig aanzetten (1 minuut)
+GitHub Pages is set to **Deploy from a branch** (`claude/dating-app-swipe-gjun2e`,
+folder `/ (root)`), so GitHub rebuilds the site on every push. The workflow in
+`.github/workflows/pages.yml` is the alternative route (Source: GitHub Actions)
+and is not used in that setup.
 
-GitHub Pages moet één keer door de eigenaar van de repository worden
-aangezet — dat kan niet vanuit een workflow:
+## Controls
 
-1. Ga naar **Settings → Pages**.
-2. Zet bij **Build and deployment → Source** de optie op **GitHub Actions**.
-3. Ga naar **Actions → Publiceren naar GitHub Pages** en klik bij de laatste
-   run op **Re-run all jobs** (of push een nieuwe commit).
-
-Daarna publiceert `.github/workflows/pages.yml` de site automatisch bij elke
-push naar `main`, `master` of een `claude/*`-branch. Staat Pages nog niet aan,
-dan faalt de stap "Pages configureren" met de melding
-`Get Pages site failed` — dat is precies deze instelling.
-
-> Let op: de site wordt gepubliceerd vanaf de branch waarop je pusht. Zorg dat
-> de branch die je wilt tonen ook de branch is die de workflow draait.
-
-## Bediening
-
-| Actie | Hoe |
+| Action | How |
 | --- | --- |
-| Naar rechts (leuk) | Kaart naar rechts slepen, op ❤️ klikken of `→` |
-| Naar links (overslaan) | Kaart naar links slepen, op ✕ klikken of `←` |
-| Stapel opnieuw schudden | Middelste knop |
-| Matchscherm sluiten | `Esc`, `Enter` of "Verder swipen" |
+| Swipe right (like) | Drag the card right, click ❤️, or press `→` |
+| Swipe left (skip) | Drag the card left, click ✕, or press `←` |
+| Reshuffle the deck | Middle button |
+| Close the match screen | `Esc`, `Enter`, or "Keep swiping" |
 
-Slepen werkt met muis, touch en pen (pointer events), dus ook op een tablet of
-telefoon tijdens de presentatie.
+Dragging uses pointer events, so it works with a mouse, a touchscreen and a pen —
+handy on a tablet or phone during the presentation.
 
-## Hoe het werkt
+## How it works
 
-1. `app.js` leest `profiles/index.json` — dat is de lijst met profielbestanden.
-2. Elk profiel wordt als los JSON-bestand uit `profiles/` opgehaald.
-3. De profielen worden geschud (Fisher-Yates), zodat de volgorde elke keer anders is.
-4. Swipe je naar rechts, dan bepaalt `Math.random()` of het een match wordt.
-   De kans komt uit het veld `matchKans` van het profiel (standaard `0.5`).
-5. Bij een match verschijnt het matchscherm met de tekst uit `matchTekst`.
-   Geen match? Dan verschijnt kort een melding in beeld.
+1. `app.js` reads `profiles/index.json` — the list of profile files.
+2. Each profile is fetched from `profiles/` as its own JSON file.
+3. The profiles are shuffled (Fisher-Yates), so the order differs every session.
+4. On a right swipe, `Math.random()` decides whether it becomes a match. The odds
+   come from the profile's `matchChance` field (defaults to `0.5`).
+5. On a match, the match screen shows the text from `matchText`. No match? A short
+   message appears instead.
 
-## Mappen
+## Folders
 
 ```
-index.html          de pagina
-styles.css          vormgeving
-app.js              swipe-logica, laden van profielen, matchafhandeling
+index.html          the page
+styles.css          styling
+app.js              swipe logic, profile loading, match handling
 profiles/
-  index.json        lijst met profielbestanden
-  lotte.json        één profiel per bestand
+  index.json        list of profile files
+  layla.json        one profile per file
   ...
 images/
-  lotte.svg         afbeelding bij het profiel
-  jij.svg           jouw eigen foto op het matchscherm
+  layla.jpg         photo for that profile (800x1040)
+  you.jpg           the account's own photo on the match screen
   ...
 ```
 
-## Een profiel toevoegen
+## Adding a profile
 
-1. Zet de afbeelding in `images/` (bijv. `images/mees.svg`, ook `.jpg`/`.png`/`.webp` mag).
-2. Maak `profiles/mees.json`:
+1. Put the photo in `images/` (for example `images/salma.jpg`; `.png` and `.webp`
+   work too). Portrait format, roughly 800x1040, keeps the cards consistent.
+2. Create `profiles/salma.json`:
 
 ```json
 {
-  "id": "mees",
-  "naam": "Mees",
-  "leeftijd": 28,
-  "woonplaats": "Zwolle",
-  "afstand": 11,
-  "werk": "Fotograaf",
-  "bio": "Korte introductie van maximaal een paar regels.",
-  "interesses": ["Fotografie", "Hardlopen", "Koken"],
-  "afbeelding": "images/mees.svg",
-  "matchKans": 0.5,
-  "matchTekst": "Deze tekst verschijnt in beeld zodra het een match is."
+  "id": "salma",
+  "name": "Salma",
+  "age": 28,
+  "city": "Doha",
+  "distance": 11,
+  "work": "Photographer",
+  "bio": "A short introduction, a couple of lines at most.",
+  "interests": ["Photography", "Running", "Cooking"],
+  "image": "images/salma.jpg",
+  "matchChance": 0.5,
+  "matchText": "This text appears on screen the moment it is a match."
 }
 ```
 
-3. Voeg `"mees.json"` toe aan `profiles/index.json`.
+3. Add `"salma.json"` to `profiles/index.json`.
 
-Alle velden behalve `naam` en `afbeelding` zijn optioneel: ontbreekt `matchKans`,
-dan is de kans 50%; ontbreekt `matchTekst`, dan toont het matchscherm een
-standaardregel.
+Every field except `name` and `image` is optional: without `matchChance` the odds
+are 50%, and without `matchText` the match screen shows a default line.
 
-## Lokaal draaien
+## Running locally
 
-De profielen worden met `fetch()` opgehaald, dus openen via `file://` werkt niet.
-Start een kleine webserver in de projectmap:
+The profiles are loaded with `fetch()`, so opening the page over `file://` does not
+work. Start a small web server in the project folder:
 
 ```bash
 python3 -m http.server 8000
-# of: npx serve .
+# or: npx serve .
 ```
 
-Open daarna http://localhost:8000.
+Then open http://localhost:8000.
 
-## Over de afbeeldingen
+## About the photos
 
-De portretten zijn zelfgemaakte SVG-illustraties, zodat de demo geen rechten van
-derden gebruikt en razendsnel laadt. Vervang ze gerust door echte foto's — pas
-dan alleen het veld `afbeelding` in het profiel aan.
+The portraits are custom-made illustrations rendered to JPEG, so the demo uses no
+third-party image rights and loads instantly. Replace them with real photos
+whenever you like — only the `image` field in the profile needs to change.
